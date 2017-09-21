@@ -1,7 +1,7 @@
 # Deploy your First Contract Instructions
 This goes through deploying your first contract on Web3 using their 1.0.0-beta.20 version.
 
-##Instructions
+## Instructions
 1. Prereqs:
     install node
 
@@ -82,23 +82,28 @@ This goes through deploying your first contract on Web3 using their 1.0.0-beta.2
     `compiledContract.bytecode`
 
 1. **see the EVM opcodes:** the opcodes map in a 1 to 1 relationship to the bytecode
-  - `compiledContract.opcodes`
+    
+    `compiledContract.opcodes`
 
 //CLEAR
 
 1. **see the ABI:** Aplication Binary Interface. An API (App Programming Interface) works for high level languages at a programming level, an ABI does the same thing but at a binary level.
-  - `compiledContract.interface`
+    
+    `compiledContract.interface`
 
 1. need the abi to do a contract, save it in JSON format
-  - `let abi = JSON.parse(compiledContract.interface)`
+    
+    `let abi = JSON.parse(compiledContract.interface)`
 
 1. instantiate the contract with web3
-  - `let myContract = new web3.eth.Contract(abi, acct1, {gas: 1000000, gasPrice: '5', from: acct2})`
-  - sending to address (acct1): `myContract.options.address`
-  - from address (acct2): `myContract.options.from`
+    
+    `let myContract = new web3.eth.Contract(abi, acct1, {gas: 1000000, gasPrice: '5', from: acct2})`
+    
+    sending to address (acct1): `myContract.options.address`
+    
+    from address (acct2): `myContract.options.from`
 
 1. deploy the contract
-solidity online compiler
     ```js
     let deployed = myContract.deploy({
       data: compiledContract.bytecode
@@ -115,4 +120,5 @@ solidity online compiler
     ```
 
 1. check on test rpc that the contract went through and investigate transaction
-  - `web3.eth.getTransaction('your_tx_id').then(console.log)`
+    
+    `web3.eth.getTransaction('your_tx_id').then(console.log)`
