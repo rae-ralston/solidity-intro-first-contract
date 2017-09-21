@@ -1,17 +1,22 @@
+# Deploy your First Contract Instructions
+This goes through deploying your first contract on Web3 using their 1.0.0-beta.20 version.
 
-
-
+##Instructions
 1. Prereqs:
-  - install node
-  - install testrpc
+    install node
+
+    install testrpc
       `npm install -g ethereumjs-testrpc`
-  - visit our [installfest doc](https://github.com/rachel-ftw/Basic-Ethereum-Dev-Env-Setup/blob/master/INSTALL.md) for more details on installing these two packages
+
+    visit our [installfest doc](https://github.com/rachel-ftw/Basic-Ethereum-Dev-Env-Setup/blob/master/INSTALL.md) for more details on installing these two packages
 
 1. [opcodes list](https://ethereum.stackexchange.com/questions/119/what-opcodes-are-available-for-the-ethereum-evm)
 
 1. Start up testrpc
-  - install testrpc: `npm install -g ethereumjs-testrpc`
-  - start command `testrpc`
+
+    install testrpc: `npm install -g ethereumjs-testrpc`
+
+    start command `testrpc`
 
 1. make a project directory and `cd` into it.
 
@@ -64,14 +69,17 @@
     //> 'contract HelloWorld {\nfunction displayMessage() constant returns (string) {\nreturn "Hello from Smart contract";\n}\n}\n'
     ```
 
-1. compile the contract
-  - `let compiled = solc.compile(source)`
+1. compile the contract:
 
-1. see the compiled contract & save into a variable
-  - `let compiledContract = compiled.contracts[':HelloWorld']`
+    `let compiled = solc.compile(source)`
+
+1. see the compiled contract & save into a variable:
+
+    `let compiledContract = compiled.contracts[':HelloWorld']`
 
 1. **see the EVM bytecode:** this is what our contracts compile to. When we deoploy to the network, this is what we're actually deploying!
-  - `compiledContract.bytecode`
+
+    `compiledContract.bytecode`
 
 1. **see the EVM opcodes:** the opcodes map in a 1 to 1 relationship to the bytecode
   - `compiledContract.opcodes`
