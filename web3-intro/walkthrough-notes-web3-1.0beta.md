@@ -85,8 +85,6 @@ This goes through deploying your first contract on Web3 using their 1.0.0-beta.2
     
     `compiledContract.opcodes`
 
-//CLEAR
-
 1. **see the ABI:** Aplication Binary Interface. An API (App Programming Interface) works for high level languages at a programming level, an ABI does the same thing but at a binary level.
     
     `compiledContract.interface`
