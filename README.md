@@ -6,9 +6,11 @@ Web3 1.0 is only in beta and I had some trouble calling my function from a deplo
 
 Shout out to [Decypher](decypher.tv), got the 0.19 version instructions from him. His videos are awesome!
 
-
+- [Web3 1.0 BETA WALKTHROUGH](https://github.com/rachel-ftw/solidity-intro-first-contract/blob/master/walkthrough-web3-1.0beta.md)
 - [Web3 1.0 BETA Documentation](https://web3js.readthedocs.io/en/1.0/index.html)
+- [Web3 0.17.0 alpha WALKTHROUGH](https://github.com/rachel-ftw/solidity-intro-first-contract/blob/master/walkthrough-web3-0.19.0.md)
 - [Web3 0.17.0 alpha Documentation](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+
 
 
 ---
