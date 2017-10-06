@@ -1,8 +1,10 @@
 # Intro to Solidity & Writing/Deploying your First Contract
 
-For Oakland Blockchain Developers: A class going over the basics of the solidity language &amp; developing/ deploying your first contract.
+For Oakland Blockchain Developers: A class going over the basics of the solidity language &amp; developing/deploying your first contract. Video coming soon.
 
-Web3 1.0 is only in beta and I had some trouble calling my function from a deployed contract. You can follow the instructions in `walkthrough-web3-1.0beta.md`. If you want to walk through on a non-beta version, follow the instructions in `walkthrough-web3.0.19.0.md`
+**October 2017**: Web3 1.0 is only in beta so I made two versions of the instructions. In the talk I walk though the beta information, figuring I'd rather be working forward than backward. If you want to follow along with me
+  - 1.0-beta (`walkthrough-web3-1.0beta.md`)[https://github.com/rachel-ftw/solidity-intro-first-contract/blob/master/walkthrough-web3-1.0beta.md].
+  - 0.19.0 (`walkthrough-web3.0.19.0.md`)[https://github.com/rachel-ftw/solidity-intro-first-contract/blob/master/walkthrough-web3-0.19.0.md]
 
 Shout out to [Decypher](decypher.tv), got the 0.19 version instructions from him. His videos are awesome, I'd strongly recommend checking him out!
 
