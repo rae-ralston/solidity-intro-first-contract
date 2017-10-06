@@ -1,31 +1,24 @@
 # Deploy your First Contract Instructions
-This goes through deploying your first contract on Web3 using their 1.0.0-beta.20 version.
-
-once I'm in node I add a function to clear the console for convience
-```js
-function clear() {
-  process.stdout.write('\u001B[2J\u001B[0;0f');
-}
-```
-
-[Opcodes list](https://ethereum.stackexchange.com/questions/119/what-opcodes-are-available-for-the-ethereum-evm) for reference.
+This goes through deploying your first contract web3 version 0.19.0 and the solc compiler.
 
 ## Instructions
-1. Prereqs:
-    install node
+1. **Prereqs:**
+    Install node
 
-    install testrpc
+    Install testrpc
       `npm install -g ethereumjs-testrpc`
 
     visit our [installfest doc](https://github.com/rachel-ftw/Basic-Ethereum-Dev-Env-Setup/blob/master/INSTALL.md) for more details on installing these two packages
 
-1. Start up testrpc
+1. Start testrpc. This operates like your `localhost`, it's your local development version of the ethereum blockchain
 
-    install testrpc: `npm install -g ethereumjs-testrpc`
+    ```bash
+    $ testrpc
+    ```
 
-    start command `testrpc`
+1. Open up a split pane. You'll need to make sure you're splitting the same sessionIf you're on iterm your session will split, if you're on bash you'll need to install tmux. Start up `testrpc` in one window & node repl in the other.
 
-1. Make a project directory and `cd` into it.
+1. In a new terminal window, make a project directory and `cd` into it.
 
 1. `$ touch package.json`
     ```js
@@ -37,25 +30,27 @@ function clear() {
     }
     ```
 
-1. `$ npm install`
+1. install the packages into your project
+    `$ npm install`
 
-1. Open up a split pane. If you're on iterm your session will split, if you're on bash you'll need to install tmux. Start up `testrpc` in one window & node repl in the other.
+1. run your node console
+    `$ node`
 
-1. Add the packages
+1. Add the packages:
     ```js
     const Web3 = require('web3')
     const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
     const solc = require('solc')
     ```
 
-1. Check to make sure web3 is instantiated correctly and connected to localhost.
+1. Check to make sure web3 is instantiated correctly and connected to localhost. If you get a list of 10 accounts back from `web3.eth.accounts`, then everything is good.
     ```js
     web3.eth.accounts
     let acct1 = web3.eth.accounts[0]
     let acct2 = web3.eth.accounts[1]
     ```
 
-1. Touch HelloWorld.sol
+1. create a file called `HelloWorld.sol`
     ```js
     contract HelloWorld {
       function displayMessage() constant returns (string) {
@@ -71,10 +66,9 @@ function clear() {
         return "Whale hello there!"; //REMEMBER SEMICOLON
       }
     }`
-    //> 'contract HelloWorld {\nfunction displayMessage() constant returns (string) {\nreturn "Hello from Smart contract";\n}\n}\n'
     ```
 
-1. Compile the contract:
+1. Use solc to compile the contract:
 
     `let compiled = solc.compile(source)`
 
