@@ -1,5 +1,7 @@
+pragma solidity ^0.4.17;
+
 contract HelloWorld {
-  function displayMessage() constant returns (string) {
-    return "Hello Smart Contract Land!";
+  function displayMessage() public pure returns (string) {
+    return "Whale hallo there!";
   }
 }
